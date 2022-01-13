@@ -1,0 +1,76 @@
+{
+    "frames": [
+        {
+            "name": "boat-right",
+            "position": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 32
+            }
+        },
+        {
+            "name": "boat-left",
+            "position": {
+                "x": 32,
+                "y": 0,
+                "w": 32,
+                "h": 32
+            }
+        },
+        {
+            "name": "ship-right",
+            "position": {
+                "x": 64,
+                "y": 0,
+                "w": 32,
+                "h": 32
+            }
+        },
+        {
+            "name": "ship-left",
+            "position": {
+                "x": 96,
+                "y": 0,
+                "w": 32,
+                "h": 32
+            }
+        },
+        {
+            "name": "boat-up",
+            "position": {
+                "x": 0,
+                "y": 32,
+                "w": 32,
+                "h": 32
+            }
+        },
+        {
+            "name": "boat-down",
+            "position": {
+                "x": 32,
+                "y": 32,
+                "w": 32,
+                "h": 32
+            }
+        },
+        {
+            "name": "ship-up",
+            "position": {
+                "x": 64,
+                "y": 32,
+                "w": 32,
+                "h": 32
+            }
+        },
+        {
+            "name": "ship-down",
+            "position": {
+                "x": 96,
+                "y": 32,
+                "w": 32,
+                "h": 32
+            }
+        }
+    ]
+}
