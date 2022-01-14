@@ -6,10 +6,6 @@ const config = {
         }
     },
     world: {
-        width: 3200,
-        height: 2400
-    },
-    viewport: {
         width: 800,
         height: 600
     },
@@ -24,7 +20,7 @@ function preload() {
 }
 
 function setup() {
-    const { viewport: { width, height }, preload: { ship } } = config
+    const { world: { width, height }, preload: { ship } } = config
 
     createCanvas(width, height)
 
