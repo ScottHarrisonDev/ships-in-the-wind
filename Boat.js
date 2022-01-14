@@ -5,8 +5,8 @@ class Boat {
         this.height = 32
         this.direction = direction
         this.pos = createVector(x, y)
-        this.image = preloadedData.spritesheet
-        this.imageData = preloadedData.spritedata.frames
+        this.image = preloadedData.image
+        this.imageData = preloadedData.data.frames
     }
 
     getImage(frames, direction) {

@@ -4,11 +4,11 @@ class Ship {
         this.width = 32
         this.height = 32
         this.direction = 'right'
-        this.reloading = false
+        this.reloadTimer = null
         this.maxSpeed = 1
         this.pos = createVector(x, y)
-        this.image = preloadedData.spritesheet
-        this.imageData = preloadedData.spritedata.frames
+        this.image = preloadedData.image
+        this.imageData = preloadedData.data.frames
     }
 
     getImage(frames, direction) {
@@ -57,6 +57,12 @@ class Ship {
         const velocityVector = this.getVelocityVector(currentPos, speed)
 
         return currentPos.add(velocityVector)
+    }
+
+    startReload() {
+        this.reloadTimer = setTimeout(() => {
+            this.reloadTimer = null
+        }, 1000)
     }
 
     draw() {
