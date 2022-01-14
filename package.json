@@ -7,6 +7,6 @@
   "author": "Scott Harrison <github@scottharrisondesign.co.uk>",
   "license": "MIT",
   "scripts": {
-    "serve": "npx http-server"
+    "serve": "npx http-server -c-1"
   }
 }
