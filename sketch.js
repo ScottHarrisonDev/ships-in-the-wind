@@ -35,7 +35,6 @@ function setup() {
         let boat = new Boat(random(0, width), random(0, height), 'right', ship)
         boats.push(boat)
         boat.draw()
-        console.log(width)
     }
 }
 
