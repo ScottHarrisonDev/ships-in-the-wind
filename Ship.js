@@ -18,6 +18,11 @@ class Ship {
     getDirection(currentPos, speed) {
         const velocityVector = this.getVelocityVector(currentPos, speed)
         const currentAngle = degrees(velocityVector.heading()).toFixed(2)
+        const targetDistance = this.getDistance(currentPos, createVector(mouseX, mouseY))
+
+        if (targetDistance < 0.6) {
+            return this.direction
+        }
 
         switch (true) {
             case (currentAngle > -135 && currentAngle < -45):
@@ -28,12 +33,18 @@ class Ship {
                 return 'left';
             case (currentAngle > -45 && currentAngle < 45):
                 return 'right';
+            default:
+                return this.direction
         }
+    }
+
+    getDistance(base, target) {
+        return target.dist(base)
     }
 
     getVelocityVector(currentPos, speed) {
         const mousePos = createVector(mouseX, mouseY)
-        const distance = mousePos.dist(currentPos)
+        const distance = this.getDistance(mousePos, currentPos)
         const distanceVector = mousePos.sub(currentPos)
         const normalizedPos = distanceVector.normalize()
         const mappedDistance = map(distance, 100, 0, speed, 0.5)
@@ -65,7 +76,7 @@ class Ship {
 
     update() {
         this.pos = this.getNewPosition(this.pos, this.maxSpeed)
-        this.direction = this.getDirection(this.pos, this.maxSpeed) || this.direction
+        this.direction = this.getDirection(this.pos, this.maxSpeed)
         this.draw()
     }
 
